@@ -1,0 +1,22 @@
+.form-app{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+.custom-control-label{
+    font-size: 15px;
+}
+.gender{
+    display: flex;
+    justify-content: space-evenly;
+}
+.custom-radio{
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:500px) {
+    .form-app{
+        width: 70vw;
+    }
+}

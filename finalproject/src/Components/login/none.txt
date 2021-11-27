@@ -1,0 +1,144 @@
+// store.js FILE
+const rootReducer = combineReducers({
+    signUpCounterPage: reducer1,
+    user: reducer2, 
+  });
+  
+  const store = createStore(
+    rootReducer,
+    composeWithDevTools(applyMiddleware(logger))
+  );
+  
+  
+  // Types.js FILE
+  export const UPDATE_FIRSTNAME = "UPDATE_FIRSTNAME";
+  export const UPDATE_LASTNAME = "UPDATE_LASTNAME";
+  export const UPDATE_ADDRESS = "UPDATE_ADDRESS";
+  export const UPDATE_APT_UNIT = "UPDATE_APT_UNIT";
+  // --------------------------
+  
+  // Actions.js FILE
+  export const updateFirstName = (action) => ({
+    type: UPDATE_FIRSTNAME,
+    ...action,
+  });
+  
+  export const updateLastName = (action) => ({
+    type: UPDATE_LASTNAME,
+    action,
+  });
+  
+  export const updateAddress = (action) => ({
+    type: UPDATE_ADDRESS,
+    action,
+  });
+  
+  export const updateAptUnit = (action) => ({
+    type: UPDATE_APT_UNIT,
+    action,
+  });
+  // --------------------------
+  
+  
+  // reducer2.js FILE
+  const initialState = {
+    firstName: "",
+    lastName: "",
+    address: "",
+    aptUnit: "",
+  };
+  
+  const signupUserReducer = (state = initialState, action) => {
+    switch (action.type) {
+      case UPDATE_FIRSTNAME:
+        return { ...state, firstName: action.value };
+      case UPDATE_LASTNAME:
+        return { ...state, lastName: action.value };
+      case UPDATE_ADDRESS:
+        return { ...state, address: action.value };
+      case UPDATE_APT_UNIT:
+        return { ...state, aptUnit: action.value };
+      default:
+        return state;
+    }
+  };
+  // --------------------------
+  
+  
+  // Page1.js FILE
+      const mapStateToProps = (state) => ({
+        firstName: state.firstName,
+      });
+      const mapDispatchToProps = (dispatch, param) => ({
+        updateFirstName: () => dispatch(updateFirstName(param.value)),
+      });
+  
+      class Page1 extends Component {
+        state = {
+          firstName: "",
+          lastName: "",
+        };
+        render() {
+          const {
+            nextPage,
+            firstName,
+            updateFirstName
+          } = this.props;
+          return ( <
+            div className = "onboarding-page d-flex justify-content-center align-items-center" >
+            <
+            div className = "d-flex flex-column align-items-center" >
+            <
+            Form className = "d-flex flex-column justify-content-center" >
+            <
+            Form.Row >
+            <
+            Form.Group as = {
+              Col
+            }
+            controlId = "formGridFirstName" >
+            <
+            Form.Control type = "text"
+            placeholder = "Enter First Name"
+            value = {
+              firstName
+            }
+            onChange = {
+              (e) => updateFirstName({
+                value: e.target.value
+              })
+            }
+            />  <
+            /Form.Group>
+  
+            <
+            Form.Group as = {
+              Col
+            }
+            controlId = "formGridLastName" >
+            <
+            Form.Control type = "text"
+            placeholder = "Enter Last Name"
+            value={lastName}
+            onChange={(e) => updateLastName({ value: e.target.value })}
+            /
+            >
+            <
+            /Form.Group> < /
+            Form.Row > <
+            Form.Group className = "d-flex justify-content-center" >
+            <
+            Button variant = "primary"
+            size = "medium"
+            onClick = {
+              nextPage
+            } >
+            Next < /
+            Button > <
+            /Form.Group> < /
+            Form > <
+            /div> < /
+            div >
+          );
+        }
+      }

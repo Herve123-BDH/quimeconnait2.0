@@ -1,0 +1,65 @@
+.choix{
+    width: 200px;
+    height: 100px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+.space{
+    margin-top: 100px;
+}
+.btn-outline-success{
+    font-size: 16px;
+    font-weight: bolder;
+}
+.amrx{
+    background: url('./img/amrx.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.amitier{
+    background-image: url('./img/amitier.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.tout{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.jouer{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.jouer-t{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+.amrxxx{
+    width: 300px;
+    background-color: rgba(122, 195, 255, 0.486);
+    border-radius: 5px;
+    box-shadow: 2px 1px 3px rgba(105, 105, 105, 0.363);
+    margin: 10px;
+}
+.amitierrr{
+    width: 300px;
+    background-color: rgba(122, 195, 255, 0.486);
+    border-radius: 5px;
+    box-shadow: 2px 1px 3px rgba(105, 105, 105, 0.363);
+    margin: 10px;
+}
+li{
+    font-size: 16px;
+}
+.progress{
+    width: 150px;
+    height: 20px;
+}

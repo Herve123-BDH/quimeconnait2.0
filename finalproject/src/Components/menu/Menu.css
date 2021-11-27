@@ -1,0 +1,28 @@
+.menu-one{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid #fff;
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 500px;
+    min-width: 200px;
+    max-height: 300px;
+    min-height: 200px;
+}
+.brand{
+    font-family: Impact, "antasy";
+    background-color: #ff1100;
+    background-image: linear-gradient(to top, rgb(0, 17, 255), rgb(0, 255, 115));
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: inherit;
+}
+@media (min-width: 500px) {
+    .menu-one{
+        padding: 5px;
+        width: 80%;
+    }
+}

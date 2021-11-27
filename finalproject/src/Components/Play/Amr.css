@@ -1,0 +1,14 @@
+.amr{
+    margin-top: 100px;
+    padding: 0;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reponse{
+    width: 150px;
+    margin: 10px;
+    font-size: 16px;
+
+}

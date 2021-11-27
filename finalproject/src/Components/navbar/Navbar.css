@@ -1,0 +1,83 @@
+.nav-app{
+    border: 1px solid #fff;
+}
+.navbar{
+    position: absolute;
+    top: 15px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+.nav-app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-link{
+    color: #fff;
+    font-size: 15px;
+    margin: 5px;
+    transition: border .5s;
+}
+.navbar-toggler{
+    border: 1px solid #fff;
+}
+
+.btn-outline-success{
+    margin:0px 0px 10px 0px;
+}
+Link{
+    text-decoration: none;
+}
+.nav-link:hover{
+    color: skyblue;
+    border-bottom: 2px solid skyblue;
+}
+.active{
+    font-family: Impact, "antasy";
+    background-color: #ff1100;
+    background-image: linear-gradient(to top, rgb(0, 17, 255), rgb(0, 255, 115));
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    text-decoration: none;
+} 
+.navbar-toggler-icon{
+    color: #fff;
+}
+.navbar-toggler{
+    color: #fff;
+}
+@media (max-width:990px) {
+    .navbar-expand-lg{
+        width: 90%;
+    }
+    .navbar-toggler-icon{
+        color: #fff;
+        border-bottom: 2px solid #fff;
+    }
+    .navbar-collapse {
+        display: block;
+    }
+    .navv{
+        width: 100%;
+    }
+
+}
+#compte{
+    background-color: rgb(25, 132, 231);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 10px;
+    font-weight: bolder;
+}

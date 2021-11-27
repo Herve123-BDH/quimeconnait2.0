@@ -1,0 +1,17 @@
+.input-group-text, .form-control{
+height: 35px;
+}
+.showtext{
+    color: #000 !important;
+    font-size: 16px;
+    cursor: pointer;
+}
+.input-group-prepend{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 35px;
+    width: 30px;
+    background-color: #e9ecef;
+}
