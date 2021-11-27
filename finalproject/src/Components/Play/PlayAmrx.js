@@ -110,7 +110,7 @@ export const PlayAmrx = () => {
         if(user===""){
             setNone("veillez entrer un nom d'utilisateur")
         }else{
-            axios.get(`https://quimeconnait.heroku.com/user/get/amrx/${id}`)
+            axios.get(`https://quimeconnait.herokuapp.com/user/get/amrx/${id}`)
                     .then(response=>{
                         setFinalreponse(response.data[response.data.length-1])
                         console.log(Finalreponse)
@@ -358,7 +358,7 @@ export const PlayAmrx = () => {
                 </div>
                 {cool==Question.length-1?<Link to='/dashboard/welldone'><img style={{cursor: "pointer", width: "120px"}} onClick={()=>{
                     console.log(pro)
-                    axios.post(`https://quimeconnait.heroku.com/user/amrx/${id}`,{friendAmrx:{name: user, score: pro}})
+                    axios.post(`https://quimeconnait.herokuapp.com/user/amrx/${id}`,{friendAmrx:{name: user, score: pro}})
                     .then(data=>data)
                     .catch(err=>console.log(err))
                     // setPro(100)

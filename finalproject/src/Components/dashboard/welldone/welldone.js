@@ -14,7 +14,7 @@ export const Welldone = () => {
     const [none, setNone]=useState("block")
     const loading= async()=>{
         try{
-            const go= await axios.get(`https://quimeconnait.heroku.com/user/get/listamrx/${id}`)
+            const go= await axios.get(`https://quimeconnait.herokuapp.com/user/get/listamrx/${id}`)
             .then(response=>{
                 setUserName(response.data.nom)
                 setUsers(response.data.amrx)

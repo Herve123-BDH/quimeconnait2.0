@@ -108,7 +108,7 @@ export const PlayAmitier = () => {
         if(user===""){
             setNone("veillez entrer un nom d'utilisateur")
         }else{
-            axios.get(`https://quimeconnait.heroku.com/user/get/amitier/${id}`)
+            axios.get(`https://quimeconnait.herokuapp.com/user/get/amitier/${id}`)
                     .then(response=>{
                         //setFinalreponse(response.data.reponse[response.data.length-1])
                         setFinalreponse(response.data.reponse[response.data.reponse.length-1])
@@ -361,7 +361,7 @@ export const PlayAmitier = () => {
                 </div>
                 {cool==Question.length-1?<Link to='/dashboard/well-done'><img style={{cursor: "pointer", width: "120px"}} onClick={()=>{
                     console.log(pro)
-                    axios.post(`https://quimeconnait.heroku.com/user/amitier/${id}`,{friendAmitier:{name: user, score: pro}})
+                    axios.post(`https://quimeconnait.herokuapp.com/user/amitier/${id}`,{friendAmitier:{name: user, score: pro}})
                     .then(data=>data)
                     .catch(err=>console.log(err))
                     // setPro(100)

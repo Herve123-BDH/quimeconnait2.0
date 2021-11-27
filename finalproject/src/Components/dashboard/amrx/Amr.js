@@ -173,7 +173,7 @@ export const Amr = () => {
                     setTimeout(() => {
                         setOk(0)
                     }, 2000);
-                    axios.post(`https://quimeconnait.heroku.com/user/upd/${user.id}`, {responseAmrx: answers})
+                    axios.post(`https://quimeconnait.herokuapp.com/user/upd/${user.id}`, {responseAmrx: answers})
                     .then(response => response)
                     
                 }}/></Link>:

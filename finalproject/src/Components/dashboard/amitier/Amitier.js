@@ -172,7 +172,7 @@ export const Amitier = () => {
                     setTimeout(() => {
                         setOk(0)
                     }, 2000);
-                    axios.post(`https://quimeconnait.heroku.com/user/upds/${user.id}`, {responseAmitier: answers})
+                    axios.post(`https://quimeconnait.herokuapp.com/user/upds/${user.id}`, {responseAmitier: answers})
                     .then(response => response)
                 }} /></Link>:
                 <img src={Next} style={{cursor: "pointer", width: "150px"}} onClick={()=>

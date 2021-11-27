@@ -108,7 +108,7 @@ export const NewAccount = () => {
             //     password: confirme
             // 
             
-            axios.post("https://quimeconnait.heroku.com/user/register", {
+            axios.post("https://quimeconnait.herokuapp.com/user/register", {
                 nom: user,
                 email: email,
                 password: confirme})

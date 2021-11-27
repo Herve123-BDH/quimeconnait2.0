@@ -47,7 +47,7 @@ export const Login = () => {
             setErr("error password")
         }else{
             
-            axios.post("https://quimeconnait.heroku.com/user/login", {email: user, password: password})
+            axios.post("https://quimeconnait.herokuapp.com/user/login", {email: user, password: password})
             .then(response => {
                 if(response.data.user){
                     dispatch(login({
